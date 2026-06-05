@@ -1,0 +1,16 @@
+Embedding Model,Tokenizer Type,Status,Best Validation F1,hidden_dim,num_layers,embedding_dropout,lstm_dropout,fc_dropout,init_type,lr,batch_size
+WORD2VEC,WHITESPACE,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+WORD2VEC,NLTK,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+WORD2VEC,WORDPIECE,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+FASTTEXT,WHITESPACE,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+FASTTEXT,NLTK,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+FASTTEXT,WORDPIECE,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+GLOVE,WHITESPACE,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+GLOVE,NLTK,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+GLOVE,WORDPIECE,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+ELMO,WHITESPACE,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+ELMO,NLTK,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+ELMO,WORDPIECE,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+BERT,WHITESPACE,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+BERT,NLTK,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
+BERT,WORDPIECE,Baseline (Untuned),0.0,256,2,0.5,0.5,0.5,xavier_uniform,0.001,32
