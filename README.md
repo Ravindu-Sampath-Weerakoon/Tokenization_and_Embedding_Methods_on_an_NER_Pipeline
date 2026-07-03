@@ -33,7 +33,7 @@ This codebase implements a unified framework to compare:
 * **Embeddings**: Custom-trained Word2Vec, Custom-trained FastText, Custom PyTorch-optimized GloVe SGD, Custom Domain-Pretrained ELMo, and Domain-Adapted Fine-tuned BERT.
 * **Sequence Models**: PyTorch Bi-LSTM with residual skip connections (Model A for 300D static embeddings) and PyTorch Bi-LSTM with Multi-Head Self-Attention (Model B for 768D contextual embeddings).
 
-All operations, evaluations, and visualizations are detailed inside the primary Jupyter notebook: [Tokenization_and_Embedding_Methods_on_an_NER_Pipeline.ipynb](file:///D:/My%20University/CSC4182%20Natural%20Language%20Processing/Programming%20Assignment%2001/Tokenization_and_Embedding_Methods_on_an_NER_Pipeline/Tokenization_and_Embedding_Methods_on_an_NER_Pipeline.ipynb).
+All operations, evaluations, and visualizations are detailed inside the primary Jupyter notebook: [Tokenization_and_Embedding_Methods_on_an_NER_Pipeline.ipynb](Tokenization_and_Embedding_Methods_on_an_NER_Pipeline.ipynb).
 
 ---
 
@@ -147,10 +147,10 @@ The project leverages the **BC5CDR disease named entity recognition dataset**. T
 * `I-Disease` (Index 3): Inside/continuation of a disease named entity.
 
 ### Preprocessing Stage
-The raw text in [train.txt](file:///D:/My%20University/CSC4182%20Natural%20Language%20Processing/Programming%20Assignment%2001/Tokenization_and_Embedding_Methods_on_an_NER_Pipeline/data/train.txt) is parsed to group tokens into continuous sentence sequences, validating length consistency between token lists and labels. The processed sentences are serialized as JSON records inside:
-* [train.json](file:///D:/My%20University/CSC4182%20Natural%20Language%20Processing/Programming%20Assignment%2001/Tokenization_and_Embedding_Methods_on_an_NER_Pipeline/processed_base_data/train.json) (4,560 sentences)
-* [val.json](file:///D:/My%20University/CSC4182%20Natural%20Language%20Processing/Programming%20Assignment%2001/Tokenization_and_Embedding_Methods_on_an_NER_Pipeline/processed_base_data/val.json) (4,581 sentences)
-* [test.json](file:///D:/My%20University/CSC4182%20Natural%20Language%20Processing/Programming%20Assignment%2001/Tokenization_and_Embedding_Methods_on_an_NER_Pipeline/processed_base_data/test.json) (4,797 sentences)
+The raw text in [train.txt](data/train.txt) is parsed to group tokens into continuous sentence sequences, validating length consistency between token lists and labels. The processed sentences are serialized as JSON records inside:
+* [train.json](processed_base_data/train.json) (4,560 sentences)
+* [val.json](processed_base_data/val.json) (4,581 sentences)
+* [test.json](processed_base_data/test.json) (4,797 sentences)
 
 ---
 
@@ -255,7 +255,7 @@ class ContextualBiLSTM_Attention_NER(nn.Module):
 
 ## ⚙️ Training Configurations & Tuning (Step 6)
 
-The hyperparameters used for training and resume steps across all 15 configurations are logged in [v2_master_tuning_report.csv](file:///D:/My%20University/CSC4182%20Natural%20Language%20Processing/Programming%20Assignment%2001/Tokenization_and_Embedding_Methods_on_an_NER_Pipeline/trained_models_v2/v2_master_tuning_report.csv):
+The hyperparameters used for training and resume steps across all 15 configurations are logged in [v2_master_tuning_report.csv](trained_models_v2/v2_master_tuning_report.csv):
 
 * **Embedding Dropout**: 0.5 (Model A & B)
 * **LSTM Encoder Dropout**: 0.5
@@ -270,7 +270,7 @@ The hyperparameters used for training and resume steps across all 15 configurati
 
 ## 📈 Performance Benchmarks & Deep Analysis (Step 7)
 
-Following full validation evaluation runs across all 15 permutations, the detailed precision, recall, and tag-specific F1 metrics are saved in [final_evaluation_report.csv](file:///D:/My%20University/CSC4182%20Natural%20Language%20Processing/Programming%20Assignment%2001/Tokenization_and_Embedding_Methods_on_an_NER_Pipeline/trained_models/final_evaluation_report.csv):
+Following full validation evaluation runs across all 15 permutations, the detailed precision, recall, and tag-specific F1 metrics are saved in [final_evaluation_report.csv](trained_models/final_evaluation_report.csv):
 
 ### Final Evaluation Results Table
 
